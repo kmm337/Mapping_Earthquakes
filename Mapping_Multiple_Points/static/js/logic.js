@@ -2,10 +2,11 @@
 console.log("working");
 
 // Create the map object with a center and zoom level.
+// LAX, SFO, SLC, and SEA
 let map = L.map('mapid').setView([37.6213,-122.3790], 5);
 
 // Coordinates for each point to be used in the polyline.
-// LAX, SFO, SLC, and SEA
+
 let line = [
   [33.9416, -118.4085],
   [37.6213, -122.3790],
@@ -26,10 +27,8 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-str
     accessToken: API_KEY
 });
 
-// New airline route: SFO, AUS, YYZ, JFK
-
+// Map SFO, AUS, YYZ, JFK
 // let map = L.map('mapid').setView([40.7, -94.5], 4);
-
 // let line = [
 //   [37.6213, -122.3790],
 //   [30.18999924, -97.668663992],
@@ -44,7 +43,6 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-str
 //   weight: 4,
 //   opacity: .5
 // }).addTo(map);
-
 // let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 //     maxZoom: 18, 
