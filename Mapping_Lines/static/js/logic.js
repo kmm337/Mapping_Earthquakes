@@ -1,12 +1,11 @@
 // Add console.log to check to see if our code is working.
 console.log("working");
 
-// Create the map object with a center and zoom level.
+// Create the map object with center at the San Francisco airport.
 // LAX, SFO, SLC, and SEA
-let map = L.map('mapid').setView([37.6213,-122.3790], 5);
+let map = L.map('mapid').setView([37.6213, -122.3790], 5);
 
 // Coordinates for each point to be used in the polyline.
-
 let line = [
   [33.9416, -118.4085],
   [37.6213, -122.3790],
@@ -14,7 +13,7 @@ let line = [
   [47.4502, -122.3088]
 ];
 
-// Create a polyline using the line coordinates and make the line red.
+// Create a polyline using the line coordinates and make the line black.
 L.polyline(line, {
   color: "yellow"
 }).addTo(map);
@@ -50,6 +49,11 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-str
 //     zoomOffset: -1,
 //     accessToken: API_KEY
 // });
+
+// Then we add our 'graymap' tile layer to the map.
+streets.addTo(map);
+console.log(" completed logic.js");
+
 
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
